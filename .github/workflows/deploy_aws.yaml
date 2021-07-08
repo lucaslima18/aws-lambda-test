@@ -1,6 +1,5 @@
 name: Build binary
-      run: | 
-      cd deploy/aws && zip deployment.zip main.py
+      run: cd deploy/aws && zip deployment.zip main.py
 
 name: default deploy
         uses: appleboy/lambda-action@master
