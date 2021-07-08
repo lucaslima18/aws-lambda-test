@@ -7,7 +7,7 @@ jobs:
       steps:
         - name: Build binary
           run: |
-            echo /home/runner/work/aws-lambda-test/aws-lambda-test/
+            cd /home/runner/work/aws-lambda-test/aws-lambda-test/ && ls
         - name: default deploy
           uses: appleboy/lambda-action@master
           with:
