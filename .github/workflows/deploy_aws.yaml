@@ -7,7 +7,7 @@ jobs:
       steps:
         - name: Build binary
           run: |
-            cd $PWD/deploy/aws && zip main.zip main.py
+            cd deploy/aws && zip main.zip main.py
         - name: default deploy
           uses: appleboy/lambda-action@master
           with:
@@ -15,4 +15,4 @@ jobs:
             aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws_region: us-east-1
             function_name: test_main
-            zip_file: main.zip
+            zip_file: deploy/aws/main.zip
