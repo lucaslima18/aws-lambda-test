@@ -1,4 +1,4 @@
-name: default deploy
+- name: default deploy
   uses: appleboy/lambda-action@master
   run: cd ../../deploy/aws/ && zip main.zip main.py
   with:
