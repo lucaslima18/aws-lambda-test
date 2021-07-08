@@ -7,7 +7,7 @@ jobs:
       steps:
         - name: Build binary
           run: |
-            cd deploy/aws && zip main.zip main.py
+            ls
         - name: default deploy
           uses: appleboy/lambda-action@master
           with:
