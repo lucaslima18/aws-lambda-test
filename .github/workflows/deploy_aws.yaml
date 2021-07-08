@@ -1,8 +1,6 @@
-name: Build binary
-      run: cd deploy/aws && zip deployment.zip main.py
-
 name: default deploy
         uses: appleboy/lambda-action@master
+        run: cd deploy/aws && zip main.zip main.py
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
