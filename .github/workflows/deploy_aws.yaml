@@ -8,5 +8,5 @@ name: default deploy
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: us-east-1
-          function_name: redactorDetectorAPI
+          function_name: test_main
           zip_file: main.zip
