@@ -8,9 +8,10 @@ jobs:
       name: deploy lambda function
       runs-on: ubuntu-latest
       steps:
-        - name: Build binary
-          run: |
-            echo $PWD
+        - uses: papeloto/action-zip@v1
+          with: 
+            files: deploy/aws/main.py
+            dest: main.zip
         - name: default deploy
           uses: appleboy/lambda-action@master
           with:
@@ -18,4 +19,4 @@ jobs:
             aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws_region: us-east-1
             function_name: test_main
-            zip_file: deploy/aws/main.zip
+
