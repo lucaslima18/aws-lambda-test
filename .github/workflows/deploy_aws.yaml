@@ -18,5 +18,6 @@ jobs:
             aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
             aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws_region: us-east-1
-            function_name: github-action-test  
+            function_name: github-action-test
+            zip_file: main.zip
 
