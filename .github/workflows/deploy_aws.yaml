@@ -7,6 +7,7 @@ jobs:
   deploy_zip:
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v2
         - uses: papeloto/action-zip@v1
           with: 
             files: deploy/aws/main.py
